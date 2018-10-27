@@ -34,7 +34,7 @@ passengerQueue.put(passenger);
 
 4.如果地图不是连通图，或者被改变成非连通图了，那么可能会永远无法输出到达目的地的提示。我认为这不算bug，因为不连通的话本来就到不了目的地，所以当然不会输出。
 
-5.我将所有出租车信息保存在taxiList中，如果想要查看xx号出租车信息请使用getInfo(xx);  1<=xx<=100
+5.所有出租车信息保存在taxiList中，如果想要查看xx号出租车信息请使用getInfo(xx);  1<=xx<=100
 注意，我的traceabletaxi编号是1~30，占用数组的71~100。比如你想要获取traceabletaxi No.1的信息请使用getInfo(71);
 
 6.红路灯初始化为所有南北向的为绿灯，所有东西向的为红灯。等红灯的时间不算在等待状态的20s内
@@ -48,7 +48,7 @@ new Taxi(Map.getPoint(12, 24)); ，而不是new Taxi(new Point(12, 24, 1));
 
 有一些方法是private的，这个方法的本意就不是用来给外部调用的，就没有考虑过外部调用的情况，因此这些方法无法进行此次测试。
 
-我理解的测试方法是: 首先repOK()测试一下你构造的对象是否正确，在确保满足方法的规格的情况下调用方法，调用完方法后再次调用repOK测试对象是否正确，比如，
+测试方法是: 首先repOK()测试一下你构造的对象是否正确，在确保满足方法的规格的情况下调用方法，调用完方法后再次调用repOK测试对象是否正确，比如，
 taxi.repOK();
 taxi.getCredit();
 taxi.repOK();
@@ -65,10 +65,4 @@ Taxi No.xx current location: (11 , 32) current time: x.x credit: x has picked up
 Taxi No.xx current location: (11 , 32) current time: x.x credit: x has arrived passenger xx's destination
 和正常情况一致
 
-10.如果点的坐标不符合要求，比如(91,5),会输出：wrong point
 
-11.请不要试着暴int的最大值，这样是不符合测试规定的
-
-12.和谐6系，请不要用几百个或者几千个请求来测试我，谢谢合作！
-
-13.bug情况：上次没有发现bug
