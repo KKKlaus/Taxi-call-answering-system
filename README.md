@@ -1,5 +1,5 @@
 # Taxi-call-answering-system
-Object-oriented course project
+Object-oriented project
 
 1.测试方法：在TestThread线程中输入类似于：
 Passenger passenger = new Passenger("1", Map.getPoint(7, 49), Map.getPoint(45, 71));
